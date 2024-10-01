@@ -87,7 +87,8 @@
         }
 
         //fb
-        if(!empty(cleanData($_POST['fb'])&&filter_var(cleanData($_POST['fb']),FILTER_VALIDATE_URL))){
+        $fbURLPattern = "/^(https?:\/\/)?(www\.)?facebook\.com\/[A-Za-z0-9\.]+$/";
+        if(!empty($_POST['fb'])&&preg_match($fbURLPattern,$_POST['fb'])){
             $_SESSION['fb'] = $_POST['fb'];
             $validFB = $_SESSION['fb'];
         }else{
