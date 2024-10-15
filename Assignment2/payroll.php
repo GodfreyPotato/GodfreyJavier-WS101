@@ -33,7 +33,7 @@ if(isset($_POST['sub'])){
         $empNameWord = "";
     }else{
         $empNameValid = "is-invalid";
-        $empNameWord = "Invalid employee name";
+        $empNameWord = "Invalid employee name!";
         $isValid = false;
     }
 
